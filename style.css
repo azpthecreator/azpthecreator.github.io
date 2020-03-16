@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    font-family: 'Baloo Thambi 2', cursive;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    animation: blured 4s infinite ease-in-out;
+    -webkit-animation: blured 4s infinite ease-in-out;
+    -moz-animation: blured 4s infinite ease-in-out;
+}
+
+::-webkit-media-controls {
+    display:none !important;
+}
+
+@keyframes blured {
+    from {
+        filter: blur(0px);
+        font-size: 24px;
+        text-transform: uppercase;
+        -webkit-filter: blur(4px);
+        animation-timing-function: ease-out;
+    }
+    25% {
+        filter: blur(1px);
+        font-size: 30px;
+        text-transform: lowercase;
+        -webkit-filter: blur(1px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        filter: blur(2px);
+        font-size: 28px;
+        text-transform: none;
+        -webkit-filter: blur(2px);
+        animation-timing-function: ease-out;
+    }
+    75% {
+        filter: blur(3px);
+        font-size: 34px;
+        text-transform: initial;
+        -webkit-filter: blur(3px);
+        animation-timing-function: ease-in;
+    }
+    to {
+        font-size: 30px;
+        text-transform: uppercase;
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
